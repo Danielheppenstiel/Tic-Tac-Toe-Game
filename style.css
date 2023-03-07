@@ -31,18 +31,16 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* border: 1px solid white; */
     height: 700px;
     max-width: 100%;
 }
 
 
-/* Top Display */
+/* TOP DISPLAY */
 #top-display {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* border: 1px solid white; */
     width: 540px;
     height: 65px
 }
@@ -86,7 +84,17 @@ main {
     cursor: pointer;
 }
 
-/* Game Board */
+/* **************** */
+/*  MEDIA QUERIES  */
+@media screen and (max-width: 530px) {
+    
+    #top-display {
+        width: 400px;
+    }
+    
+}
+
+/* GAME BOARD */
 
 #game-board {
     display: grid;
@@ -97,7 +105,6 @@ main {
     margin-top: 2rem;
     height: 540px;
     width: 540px;
-    /* border: 1px solid white; */
 }
 
 .game-square {
@@ -111,7 +118,36 @@ main {
     box-shadow: 1px 5px 4px 1px #10212a;
 }
 
-/* Tracking */
+/* **************** */
+/*  MEDIA QUERIES  */
+@media screen and (max-width: 530px) {
+    
+    #game-board {
+        width: 420px;
+        height: 420px;
+    }
+
+    .game-square {
+        height: 120px;
+        width: 120px;
+    }
+    
+}
+
+@media screen and (max-width: 400px) {
+
+    #game-board {
+        width: 400px;
+        height: 400px;
+    }
+
+    .game-square {
+        height: 115px;
+        width: 115px;
+    }
+}
+
+/* TRACKING */
 
 #tracking {
     margin-top: 2rem;
@@ -158,7 +194,7 @@ main {
     pointer-events: none;
 }
 
-/* Modal */
+/* MODAL */
 
 #modal {
     position: absolute;
@@ -231,13 +267,12 @@ main {
     display: none !important;
 }
 
-/* Starting Dashboard */
+/* STARTING DASHBOARD */
 
 .dashboard-container {
     display: flex;
     place-items: center;
     flex-direction: column;
-    /* border: 1px solid white; */
     width: 400px;
     height: 500px;
 }
