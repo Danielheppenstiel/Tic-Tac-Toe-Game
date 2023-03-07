@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tic-Tac-Toe</title>
+</head>
+
+<body>
+
+    <!-- Starting Dashboard -->
+    <section id="start-display" class="start-dashboard">
+        <div class="dashboard-container">
+            <img class="start-logo" src="./assets/logo.svg" alt="logo">
+            <div class="start-rules">
+                <h2>Human Player Goes First</h2>
+                <img src="./assets/icon-x-outline.svg" alt="X outline">
+                <h3>You are X</h3>
+            </div>
+            <button class="start-game-btn">
+                Start Game
+            </button>
+        </div>
+    </section>
+
+    <main class="hide main-container">
+        <!-- Logo, turn & restart -->
+        <section id="top-display">
+            <img id="logo" src="./assets/logo.svg" alt="game logo">
+            <div id="turn" data-turn="x">
+                <img class="turn-logo" src="./assets/icon-x.svg" alt="icon">
+                <h4 class="turn-title">TURN</h4>
+            </div>
+            <button id="restart"><img src="./assets/icon-restart.svg" alt="restart button"></button>
+        </section>
+        <!-- Game board -->
+        <section id="game-board">
+            <div data-cellIndex="0" class="s1 game-square"></div>
+            <div data-cellIndex="1" class="s2 game-square"></div>
+            <div data-cellIndex="2" class="s3 game-square"></div>
+            <div data-cellIndex="3" class="s4 game-square"></div>
+            <div data-cellIndex="4" class="s5 game-square"></div>
+            <div data-cellIndex="5" class="s6 game-square"></div>
+            <div data-cellIndex="6" class="s7 game-square"></div>
+            <div data-cellIndex="7" class="s8 game-square"></div>
+            <div data-cellIndex="8" class="s9 game-square"></div>
+        </section>
+        <!-- Tracker Stats -->
+        <section id="tracking">
+            <div id="you-tracker" class=" tracking-item">
+                <h5 class="who-track">X (YOU)</h5>
+                <h3 class="score x-score">0</h3>
+            </div>
+            <div id="tie-tracker" class="tracking-item">
+                <h5 class="who-track">DRAW</h5> 
+                <h3 class="score draw-score">0</h3>
+            </div>
+            <div id="cpu-tracker" class="tracking-item">
+                <h5 class="who-track">O (CPU)</h5>
+                <h3 class="score o-score">0</h3>
+            </div>
+
+            <section id="modal" class="modal hide">
+                <div class="modal-contents">
+                    <p class="winner-para">Player X Wins</p>
+                    <h2 class="winner-title">X Takes The Round</h2>
+                    <div class="modal-btns">
+                        <button class="quit-btn">Quit</button>
+                        <button class="next-round-btn">Next Round</button>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+
+    </main>
+    <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>
